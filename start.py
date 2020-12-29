@@ -12,7 +12,7 @@ import os
 #>>> bandit -r <folder>
 #deprecated md5 will not be found by sonar...
 
-password=os.getenv("123_x")
+password=os.getenv("123_x&5s")
 hash_object = hashlib.sha256(b'123_x32&')
 
 password = b"bobo"
