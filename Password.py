@@ -8,17 +8,24 @@ import os
 salt = os.urandom(32)
 
 class Password:
-    def hash_password(self, password_string):
+
+    
+    @staticmethod
+    def hash_password(password_string):
         #hashed_password = bcrypt.hashpw(password_string, bcrypt.gensalt())
         hashed_password = hashlib.pbkdf2_hmac('sha256',password_string,salt,10000,dklen=None)
-        print(binascii.hexlify(hashed_password))
+        #print(type(hashed_password))
         return hashed_password
 
-    def hash_check(self, cleartext_password, hashed_password):
+
+    @staticmethod
+    def hash_check(cleartext_password, hashed_password):
         if (hashlib.pbkdf2_hmac('sha256',cleartext_password,salt,10000,dklen=None), hashed_password):
             print("Yes")
+            return True
         else:
-            print("No")    
+            print("No")  
+            return False  
 
 #pw = input("Passwort: ")
 #password = str.encode(pw) #Conversion string to bytes
