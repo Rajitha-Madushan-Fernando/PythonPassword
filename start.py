@@ -13,7 +13,7 @@ import os
 #deprecated md5 will not be found by sonar...
 
 password=os.getenv("123_x&5s")
-hash_object = hashlib.sha256(b'123_x32&')
+hash_object = hashlib.sha256(os.getenv(b'123_x32&'))
 
 password = b"bobo"
 
