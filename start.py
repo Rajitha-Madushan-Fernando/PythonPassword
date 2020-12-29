@@ -1,7 +1,7 @@
 from User import User
 from Password import Password
 import hashlib
-
+import os
 #Example to trigger a sonar vulnerability
 #import socket
 #ip = '127.0.0.1'
@@ -11,7 +11,8 @@ import hashlib
 #typical bandit findings
 #>>> bandit -r <folder>
 #deprecated md5 will not be found by sonar...
-password="123_x&5s" 
+
+password=os.getenv("123_x")
 hash_object = hashlib.sha256(b'123_x32&')
 
 password = b"bobo"
