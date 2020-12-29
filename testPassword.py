@@ -1,7 +1,7 @@
 import unittest
 from Password import Password as Password
 
-class test_Password(unittest.TestCase):
+class TestPassword(unittest.TestCase):
 
     def setUp(self):
         self.password = '123_x&5s'.encode()
