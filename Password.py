@@ -2,7 +2,7 @@
 
 import bcrypt #pip install bcyrptbandi
 import hmac
-import hashlib,binascii
+import hashlib
 import os
 
 salt = os.urandom(32)
