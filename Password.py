@@ -12,13 +12,13 @@ class Password:
     
     @staticmethod
     def hash_password(password_string):
-        hashed_password = hashlib.pbkdf2_hmac('sha256',password_string,salt)
+        hashed_password = hashlib.sha256(password_string)
         return hashed_password
 
 
     @staticmethod
     def hash_check(cleartext_password, hashed_password):
-        if (hashlib.pbkdf2_hmac('sha256',cleartext_password,salt), hashed_password):
+        if (hashlib.sha256(cleartext_password), hashed_password):
             print("Yes")
             return True
         else:
