@@ -14,7 +14,6 @@ import bcrypt
 #deprecated md5 will not be found by sonar...
 
 password=os.getenv("123_x&5s")
-#bcrypt.hashpw(password_string, bcrypt.gensalt())
 hash_object = bcrypt.hashpw((b'123_x32&'),bcrypt.gensalt())
 
 password = "bobo".encode()
