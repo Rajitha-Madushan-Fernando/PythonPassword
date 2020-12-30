@@ -15,7 +15,7 @@ import os
 password=os.getenv("123_x&5s")
 hash_object = hashlib.sha256(b'123_x32&')
 
-password = os.getenv(b"bobo")
+password = "bobo".encode()
 
 user1 = User()
 user1.set_name("Bert")
